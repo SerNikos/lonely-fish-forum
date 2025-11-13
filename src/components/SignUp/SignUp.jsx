@@ -3,13 +3,26 @@ import "./SignUp.css";
 
 function App() {
   const initialValues = { username: "", email: "", password: "" };
+
+  //stores the user’s input.
   const [formValues, setFormValues] = useState(initialValues);
+  //stores any validation error messages.
   const [formErrors, setFormErrors] = useState({});
+  //tracks if the user has submitted the form.
   const [isSubmit, setIsSubmit] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormValues({ ...formValues, [name]: value });
+  const handleChange = (event) => {
+    // Get the input field that triggered the change
+    const inputField = event.target;
+
+    // 2 Extract the field name (e.g. "email") and the value the user typed
+    const fieldName = inputField.name;
+    const fieldValue = inputField.value;
+
+    //3 Update the formValues state:
+    // - Copy all existing fields (...formValues)
+    // - Overwrite the one that changed ([fieldName]: fieldValue)
+    setFormValues({ ...formValues, [fieldName]: fieldValue });
   };
 
   const handleSubmit = (e) => {
@@ -24,6 +37,8 @@ function App() {
       console.log(formValues);
     }
   }, [formErrors]);
+
+  
   const validate = (values) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -39,8 +54,8 @@ function App() {
       errors.password = "Password is required";
     } else if (values.password.length < 4) {
       errors.password = "Password must be more than 4 characters";
-    } else if (values.password.length > 10) {
-      errors.password = "Password cannot exceed more than 10 characters";
+    } else if (values.password.length > 15) {
+      errors.password = "Password cannot exceed more than 15 characters";
     }
     return errors;
   };
@@ -50,7 +65,7 @@ function App() {
       {Object.keys(formErrors).length === 0 && isSubmit ? (
         <div className="ui message success">Signed in successfully</div>
       ) : null}
-      
+
       <div className="title">SOME APP</div>
 
       <form onSubmit={handleSubmit}>
