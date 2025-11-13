@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./SignUp.css";
+import axios from "axios";
 
 function App() {
   const initialValues = { username: "", email: "", password: "" };
@@ -38,7 +39,6 @@ function App() {
     }
   }, [formErrors]);
 
-  
   const validate = (values) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -59,6 +59,23 @@ function App() {
     }
     return errors;
   };
+
+const handlePost = () => {
+  axios
+    .post("http://localhost:5033/", {
+      username: formValues.username,
+      email: formValues.email,
+      password: formValues.password,
+    })
+    .then((res) => {
+      console.log(res.username);
+      console.log(res.email);
+      console.log(res.password);
+    })
+    .catch((err) => {
+      console.error("Error posting data:", err);
+    });
+};
 
   return (
     <div className="signup-container">
@@ -105,7 +122,9 @@ function App() {
             />
           </div>
           <p>{formErrors.password}</p>
-          <button className="submit-button">Submit</button>
+          <button className="submit-button" onClick={handlePost}>
+            Submit
+          </button>
         </div>
       </form>
     </div>
