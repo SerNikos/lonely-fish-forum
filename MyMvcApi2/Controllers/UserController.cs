@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using MyMvcApi2.Models;
 using MyMvcApi2.Models.Data;
-using Microsoft.AspNetCore.Identity; //Για να κάνουμε hash το password
 using MyMvcApi2.Helpers;
 using MyMvcApi2.Dtos;
 
@@ -22,18 +21,18 @@ namespace MyMvcApi2.Controllers
             _jwtHelper = jwtHelper;
         }
 
-        [HttpPost("login")]
+        [HttpPost("login")] //http://localhost:5033/api/user/login
         public IActionResult Login(LoginDto dto)
         {
             // 1. Βρίσκουμε τον χρήστη
-            var user = _context.Users.FirstOrDefault(u => u.Email == dto.Email);
+            var user = _context.Users.FirstOrDefault(u => u.Username == dto.Username);
             if (user == null)
-                return BadRequest("Invalid email or password");
+                return BadRequest("Invalid Username");
 
             // 2. Ελέγχουμε το password
             bool valid = PasswordHelper.VerifyPassword(dto.Password, user.Password);
             if (!valid)
-                return BadRequest("Invalid email or password");
+                return BadRequest("Invalid password");
 
             // 3. Φτιάχνουμε το JWT token
             var token = _jwtHelper.CreateToken(user);
@@ -47,10 +46,15 @@ namespace MyMvcApi2.Controllers
         public IActionResult Register(RegisterDto dto) // IActionResult -> HTTP Result 
                                                        // User -> ο πίνακας user
         {
-            // 1. Check if email already exists
+            // 1. Check if email or username already exists
             if (_context.Users.Any(u => u.Email == dto.Email))
             {
                 return BadRequest("Email already exists");
+            }
+
+            if (_context.Users.Any(u => u.Username == dto.Username))
+            {
+                return BadRequest("Username already exists");
             }
 
             // 2. Hash password
@@ -69,13 +73,7 @@ namespace MyMvcApi2.Controllers
             _context.Users.Add(user);
             _context.SaveChanges();
 
-            return Ok(new
-            {
-                message = "User created successfully",
-                user.Id,
-                user.Username,
-                user.Email
-            });
+            return Ok("User created successfully");
         }
 
     }

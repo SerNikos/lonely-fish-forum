@@ -1,4 +1,3 @@
-using BCrypt.Net;
 
 namespace MyMvcApi2.Helpers
 {
