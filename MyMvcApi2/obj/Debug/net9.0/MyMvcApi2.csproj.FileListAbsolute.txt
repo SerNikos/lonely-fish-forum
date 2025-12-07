@@ -305,3 +305,4 @@ C:\Users\Christian Culbida\Documents\GitHub\MyMvcApi2\obj\Debug\net9.0\refint\My
 C:\Users\Christian Culbida\Documents\GitHub\MyMvcApi2\obj\Debug\net9.0\MyMvcApi2.pdb
 C:\Users\Christian Culbida\Documents\GitHub\MyMvcApi2\obj\Debug\net9.0\MyMvcApi2.genruntimeconfig.cache
 C:\Users\Christian Culbida\Documents\GitHub\MyMvcApi2\obj\Debug\net9.0\ref\MyMvcApi2.dll
+C:\Users\Christian Culbida\Documents\GitHub\MyMvcApi2\bin\Debug\net9.0\BCrypt.Net-Next.dll

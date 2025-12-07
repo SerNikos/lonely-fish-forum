@@ -15,7 +15,6 @@ namespace MyMvcApi2.Models
         public string Email { get; set; }
 
         [Required]
-        [MaxLength(15)]
         [MinLength(4)]
         public string Password { get; set; }
     }
