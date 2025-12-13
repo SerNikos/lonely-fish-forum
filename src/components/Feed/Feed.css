@@ -1,0 +1,73 @@
+.feed-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title-tsipoura {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.feed-container h2 {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.feed-container hr {
+  margin: 30px 0;
+  border: none;
+  border-top: 2px solid #eee;
+}
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.post-item {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #4a9eff;
+}
+
+.post-item p {
+  margin: 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+.like-button {
+  padding: 12px 24px;
+  background-color: #4a9eff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.like-button:hover {
+  background-color: #3a8eef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(74, 158, 255, 0.3);
+}
+
+.like-button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.post-text {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}

@@ -1,0 +1,33 @@
+.post-tsipoura-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.post-tsipoura-container input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+.post-tsipoura-container input:focus {
+  outline: none;
+  border-color: #4a9eff;
+}
+
+.post-tsipoura-container button {
+  padding: 12px 24px;
+  background-color: #4a9eff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.post-tsipoura-container button:hover {
+  background-color: #3a8eef;
+}
+

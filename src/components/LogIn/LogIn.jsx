@@ -51,7 +51,7 @@ const handlePost = (event) => {
     .catch((err) => {
       console.error("Error posting data:", err);
       alert("Login failed — check your username or password.");
-    });
+    }); 
 };
 
 
