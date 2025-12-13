@@ -30,7 +30,7 @@ namespace MyMvcApi2.Helpers
         };
             var token = new JwtSecurityToken(
                 claims: claims,
-                expires: DateTime.UtcNow.AddDays(7),
+                expires: DateTime.UtcNow.AddDays(1),
                 signingCredentials: creds
             );
 
