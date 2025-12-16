@@ -2,6 +2,7 @@ import React from "react";
 import "./LogIn.css";
 import { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function LogIn() {
   const [loginInputValues, setLoginInputValues] = useState({
@@ -97,6 +98,11 @@ const handlePost = (event) => {
         <button className="submit-button" onClick={handlePost}>
           Log In
         </button>
+
+        You need Sign Up?   
+         <Link to="/SignUp">
+            Click here!
+        </Link>
       </form>
     </div>
   );
