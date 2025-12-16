@@ -99,7 +99,7 @@ const handlePost = (event) => {
           Log In
         </button>
 
-        You need Sign Up?   
+        You need Sign Up? {" "}  
          <Link to="/SignUp">
             Click here!
         </Link>
