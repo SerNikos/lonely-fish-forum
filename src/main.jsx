@@ -10,7 +10,8 @@ import NotFound from './components/NotFound/NotFound.jsx';
 
 
 const router = createBrowserRouter([
-  { path: "/", element: <LogIn /> },
+  { path: "/", element: <App /> },
+  { path: "/LogIn", element: <LogIn /> },
   { path: "/SignUp", element: <SignUp /> },
   { path: "/Feed", element: <Feed /> },
   { path: "*", element: <NotFound /> },
