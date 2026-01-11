@@ -4523,31 +4523,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ser Nikos\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Christian Culbida\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ReactProjects\\dating-app\\MyMvcApi2\\MyMvcApi2.csproj",
+      "projectUniqueName": "C:\\Users\\Christian Culbida\\Documents\\GitHub\\MyMvcApi2\\MyMvcApi2.csproj",
       "projectName": "MyMvcApi2",
-      "projectPath": "D:\\ReactProjects\\dating-app\\MyMvcApi2\\MyMvcApi2.csproj",
-      "packagesPath": "C:\\Users\\Ser Nikos\\.nuget\\packages\\",
-      "outputPath": "D:\\ReactProjects\\dating-app\\MyMvcApi2\\obj\\",
+      "projectPath": "C:\\Users\\Christian Culbida\\Documents\\GitHub\\MyMvcApi2\\MyMvcApi2.csproj",
+      "packagesPath": "C:\\Users\\Christian Culbida\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Christian Culbida\\Documents\\GitHub\\MyMvcApi2\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Ser Nikos\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Christian Culbida\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
