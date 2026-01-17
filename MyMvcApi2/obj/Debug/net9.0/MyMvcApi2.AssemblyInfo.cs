@@ -13,7 +13,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyMvcApi2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79d259aa0fdfe86c9418e9afb73eb301ac85970f")]
+<<<<<<< Updated upstream
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd38144f35bcb8b7308ac365563a3953a0892914")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d194eaca328b7ea041f71fb2bf526aa310e482d7")]
+>>>>>>> Stashed changes
 [assembly: System.Reflection.AssemblyProductAttribute("MyMvcApi2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyMvcApi2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

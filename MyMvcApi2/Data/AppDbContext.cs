@@ -10,5 +10,6 @@ namespace MyMvcApi2.Models.Data
 
         // Κάθε DbSet<T> είναι ένας πίνακας στη βάση
         public DbSet<User> Users { get; set; } //Δηλώνει ότι θα υπάρχει πίνακας Users στη βάση. Κάθε αντικείμενο User αντιστοιχεί σε μια γραμμή του πίνακα.
+        public DbSet<Post> Posts { get; set; }
     }
 }
